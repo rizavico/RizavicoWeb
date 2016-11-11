@@ -35,7 +35,7 @@
 </section>
 <section class="content-11">
     <div class="container">
-        <span>I deliver high-quality online technical training, courses &amp; workshops. I specialize in DevOps, AWS &amp; Scalable Web Applications.</span>
+        <span>I specialize in DevOps, AWS &amp; Scalable Web Applications.</span>
     </div>
 </section><section class="content-8">
     <div>
@@ -54,7 +54,7 @@
                         <br />
                         <h3 style="margin:5px; padding: 5px;"><span style="color: #999"><strike>$150</strike></span>&nbsp;&nbsp;<span style="color: #e74c3c"><strong>$15</strong></span></h3>
                     </p>
-                    <a class="btn btn-large btn-clear" href="#mailList">Get 90% Discount Coupon</a>
+                    <a class="btn btn-large btn-clear" href="javascript:;" id="couponBtn">Get 90% Discount Coupon</a>
 
                 </div>
             </div>
@@ -72,7 +72,7 @@
                 </div>
                 <div class="col-sm-4">
                     <button class="btn btn-large btn-primary" id="subscribeBtn" type="submit">
-                        Subscribe & get coupon!
+                        Subscribe
                     </button>
                 </div>
             </form>
@@ -83,7 +83,9 @@
             </div>
         </div>
     </div>
-</section><footer class="footer-7 ">
+</section>
+
+<footer class="footer-7 ">
     <div class="container">
         <a href="#"><span class="fui-home"> </span></a>
         <nav>
@@ -92,7 +94,7 @@
                 <li><a href="//github.com/rizavico">GITHUB</a></li>
                 <li class="scroll-btn"><a href="#" class="scroll-top fui-arrow-up"> </a></li>
                 <li><a href="//www.udemy.com/user/ali-rizavi/">UDEMY PROFILE</a></li>
-                <li><a href="//twitter.com/rizavico">TWEET ME</a></li>
+                <li><a href="javascript:;" id="contactBtn">CONTACT</a></li>
             </ul>
         </nav>
         <div class="social-btns">
@@ -123,11 +125,24 @@
             <script src="startup/common-files/js/startup-kit.js"></script>
             <script src="assets/js/js-cookie.js"></script>
             <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
+            <script src="https://form.jotformeu.com/static/feedback2.js?3.3.REV" type="text/javascript"></script>
             <script type="text/javascript">
             var xPopup = function(event){
                 Cookies.remove('MCEvilPopupClosed');
                 require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us14.list-manage.com","uuid":"0900aa308e38c99d4c1a0347f","lid":"7124e4c38a", "mc-EMAIL":"boo@boo.com"}) });
             };
+            
+            $("#contactBtn").click(function(e){
+                e.stopPropagation(); e.preventDefault();
+                var JFL_63156754587367 = new JotformFeedback({ formId: '63156754587367', base: 'https://form.jotformeu.com/', windowTitle: 'Contact', background: '#FFA500', fontColor: '#FFFFFF', type: 'false', height: 500, width: 700, openOnLoad: true });
+                //window.open( 'https://form.jotformeu.com/63156754587367', 'blank', 'scrollbars=yes, toolbar=no, width=700, height=500' );
+            });
+            
+           $("#couponBtn").click(function(e){
+                e.stopPropagation(); e.preventDefault();
+                var JFL_63157155713354 = new JotformFeedback({ formId: '63157155713354', base: 'https://form.jotformeu.com/', windowTitle: 'FREE Coupons & Early-bird Discounts on Courses', background: '#566', fontColor: '#FFFFFF', type: '1', height: 500, width: 750, openOnLoad: true });
+
+            });
         </script>
         </div>
     </body>
