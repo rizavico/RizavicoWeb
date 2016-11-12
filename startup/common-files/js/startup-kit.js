@@ -561,7 +561,11 @@ startupKit.uiKitHeader.header21 = function() {
     if((maxH / 90) < 3){
         $('.header-21-sub .control-btn').css('bottom', 0);
     }
-    $('.header-21-sub').height(maxH);
+    var autoHeight = $('.header-21-sub').data('autoheight');
+    console.log(autoHeight);
+    if(autoHeight===undefined || autoHeight != 'disable'){
+        $('.header-21-sub').height(maxH);
+    }
 
     $('.header-21-sub .control-btn').on('click', function() {
         $.scrollTo($(this).closest('section').next(), {
